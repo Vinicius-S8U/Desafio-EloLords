@@ -1,0 +1,144 @@
+body{
+ margin: 0;
+ padding: 0;   
+}
+
+#header{
+height: 10vh;
+width: 100%;
+background-color: transparent;
+z-index: 1;
+}
+
+
+#container_header{
+
+width: 90%;
+margin: auto;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+#Logo{
+
+height: 140px;
+width: 190px;    
+
+}
+
+#navbar{
+list-style: none;
+
+}
+
+#navbar a{
+color: white;   
+text-decoration: none;
+font-size: 30px;
+
+}
+
+#Section1{
+
+z-index: 1;
+
+height: 65vh;
+width: 100vw;
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.span_compre{
+
+color: whitesmoke;
+font-size: 45px;
+}
+
+#video_fundo{
+object-fit: fill;
+height: 75vh;
+width: 100vw;
+
+z-index: -1;
+
+left: 0;
+top: 0;
+
+position: absolute;
+}
+
+
+#Section2{
+
+margin-top: 2%;
+
+height: 25vh;
+width: 100vw;
+
+}
+
+#Diferencial{
+
+display: flex;
+justify-content: space-between;
+
+
+height: 100%;
+width: 90%;
+margin: auto;
+
+margin-top: 2%;
+
+}
+
+.motivo{
+display: flex;
+justify-content: center;
+align-items: center;  
+flex-direction: column;
+   
+height: 70%;
+width: 32%; 
+
+font-size: 20px;
+
+
+padding: 1%;
+border: 2px black solid;
+border-radius: 10px;
+
+}
+
+#Section3{
+
+height: 50vh;
+width: 100vw;
+
+display: flex;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+footer{
+
+height: 10vh;
+width: 100vw;
+
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: black;
+color: white;
+
+}
