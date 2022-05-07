@@ -24,8 +24,8 @@ align-items: center;
 
 #Logo{
 
-height: 140px;
-width: 190px;    
+height: 100px;
+width: 140px;    
 
 }
 
@@ -81,6 +81,7 @@ margin-top: 2%;
 height: 25vh;
 width: 100vw;
 
+display: flex;
 }
 
 #Diferencial{
@@ -121,12 +122,25 @@ height: 50vh;
 width: 100vw;
 
 display: flex;
-justify-content: space-around;
+align-items: center;
+flex-direction: column;
 
 }
 
+#select_elo{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;    
+    
+}
+
+#elo_b{
+  width: 40%;
 
 
+  display: flex;
+  justify-content: space-around;
+}
 
 
 

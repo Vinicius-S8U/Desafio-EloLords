@@ -16,7 +16,7 @@
     <div id="header">
         <div id="container_header">
 
-            <img id="Logo" src="/Desafio-EloLorde/Desafio-EloLords/Img e Itens/Logo_menor.png">
+            <img id="Logo" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/logos/logo-new-color.png">
 
             <ul id="navbar">
                 <li> <a href="Login.html">Área do cliente</a></li>
@@ -28,12 +28,12 @@
 
     <section id="Section1">
 
-        <video autoplay loop muted src="/Desafio-EloLorde/Desafio-EloLords/Img e Itens/video-fundo-HD.mp4"
+        <video autoplay loop muted src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/video-fundo-HD.mp4"
             id="video_fundo"></video>
 
-        <span class="span_compre">The Best</span>
+        <!--   <span class="span_compre">The Best</span>
         <span class="span_compre">Players</span>
-        <span class="span_compre">in League</span>
+        <span class="span_compre">in League</span> -->
 
 
     </section>
@@ -86,81 +86,88 @@
     </section>
 
 
-<section id="Section3">
+    <section id="Section3">
 
 
 
 
 
 
-<div id="elo_a" >
+        <div id="select_elo">
 
-<select id="elo_atual" onchange="MudeimgA()">
-<option value="f">Ferro</option>    
-<option value="b">Bronze</option>    
-<option value="pr">Prata</option>
-<option value="o">Ouro</option>
-<option value="p">Platina</option>
-<option value="d">Diamante</option>
-<option value="m">Mestre</option>
-<option value="g">Grão-Mestre</option>
-<option value="de">Desafiante</option>
-
-</select>
-
-<select id="nivel_elo_atual"  onchange="MudeimgA()">
-<option value="1"> 1</option>
-<option value="2"> 2</option>
-<option value="3"> 3</option>
-<option value="4"> 4</option>
-
-</select>
-
-<img id="img_elo_atual" src="/Desafio-EloLorde/Desafio-EloLords/Img e Itens/Elos/Ferro_1.png">
-
-</div>
-
-<div id="elo_b"  >
-
-<select id="elo_desejado" onchange="MudeimgB()">
-<option value="f">Ferro</option>    
-<option value="b">Bronze</option>    
-<option value="pr">Prata</option>
-<option value="o">Ouro</option>
-<option value="p">Platina</option>
-<option value="d">Diamante</option>
-<option value="m">Mestre</option>
-<option value="g">Grão-Mestre</option>
-<option value="de">Desafiante</option>
-
-</select>
-
-<select id="nivel_elo_desejado"  onchange="MudeimgB()">
-    <option value="1"> 1</option>
-    <option value="2"> 2</option>
-    <option value="3"> 3</option>
-    <option value="4"> 4</option>
-    
-</select>
+         <div>
+            <select id="elo_atual" onchange="MudeimgA()">
+                <option value="f">Ferro</option>
+                <option value="b">Bronze</option>
+                <option value="pr">Prata</option>
+                <option value="o">Ouro</option>
+                <option value="p">Platina</option>
+                <option value="d">Diamante</option>
+                <option value="m">Mestre</option>
 
 
-<img id="img_elo_desejavel" src="/Desafio-EloLorde/Desafio-EloLords/Img e Itens/Elos/Ferro_1.png">
+            </select>
 
-</div>
+            <select id="nivel_elo_atual" onchange="MudeimgA()">
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+
+            </select>
+        </div>
+            
+              
+        <div>
+            <select id="elo_desejado" onchange="MudeimgB()">
+                <option value="f">Ferro</option>
+                <option value="b">Bronze</option>
+                <option value="pr">Prata</option>
+                <option value="o">Ouro</option>
+                <option value="p">Platina</option>
+                <option value="d">Diamante</option>
+                <option value="m">Mestre</option>
 
 
-</section>
+            </select>
+
+            <select id="nivel_elo_desejado" onchange="MudeimgB()">
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+
+            </select>
+        </div>
+
+        </div>
+
+        <div id="elo_b">
+
+            <img id="img_elo_atual" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_1.png">
+            <img id="img_elo_desejavel" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_1.png">
+           
+
+        </div>
+
+        <div id="div_simulador">
+
+        </div>
+
+
+
+    </section>
 
 
 
 
 
-<footer>
+    <footer>
 
-<span id="span_footer">Elo-Lords All rights Copyrighted &copy;</span>
+        <span id="span_footer">Elo-Lords All rights Copyrighted &copy;</span>
 
 
-</footer>
+    </footer>
 
 </body>
 
