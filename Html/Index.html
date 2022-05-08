@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Desafio-EloLorde/Desafio-EloLords/CSS/Style.css">
+    <link rel="stylesheet" href="/CSS/Style.css">
     <title>Elo-Lords The One</title>
-    <script src="/Desafio-EloLorde/Desafio-EloLords/Script/Script.js"></script>
+    <script src="/Script/Script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 
@@ -16,7 +17,7 @@
     <div id="header">
         <div id="container_header">
 
-            <img id="Logo" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/logos/logo-new-color.png">
+            <img id="Logo" src="/ImgDeItens/logos/logo-new-color.png">
 
             <ul id="navbar">
                 <li> <a href="Login.html">Área do cliente</a></li>
@@ -28,7 +29,7 @@
 
     <section id="Section1">
 
-        <video autoplay loop muted src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/video-fundo-HD.mp4"
+        <video autoplay loop muted src="/ImgDeItens/video-fundo-HD.mp4"
             id="video_fundo"></video>
 
         <!--   <span class="span_compre">The Best</span>
@@ -145,8 +146,8 @@
 
             <div id="elo_b">
 
-                <img id="img_elo_atual" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_4.png">
-                <img id="img_elo_desejavel" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_1.png">
+                <img id="img_elo_atual" src="/ImgDeItens/Elos/Ferro_4.png">
+                <img id="img_elo_desejavel" src="/ImgDeItens/Elos/Ferro_1.png">
 
 
             </div>
@@ -170,8 +171,19 @@
 
     </section>
 
+<section id="Section4">
+
+    <div id="control_grafico">
+    <canvas id="Tempo_elo"  height="300px" width="300px"></canvas> 
+</div>   
+</section>
 
 
+<section id="Section5">
+
+<h1>Integrantes</h1>
+
+</section>
 
 
     <footer>
@@ -184,3 +196,38 @@
 </body>
 
 </html>
+
+<script>
+    
+
+
+    const labels = [
+    'Ferro',
+    'Bronze',
+    'Prata',
+    'Ouro',
+    'Platina',
+    'Diamante',
+    'Mestre'
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Elo Mais Desejado',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [2,4, 8, 16, 32,64,128],
+    }]
+  };        
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {}
+  };
+  const myChart = new Chart(
+    document.getElementById('Tempo_elo'),
+    config
+  );
+</script>
