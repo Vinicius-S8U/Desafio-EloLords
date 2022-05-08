@@ -92,65 +92,77 @@
 
 
 
+        <div id="control_select_img">
 
-        <div id="select_elo">
+            <div id="select_elo">
 
-         <div>
-            <select id="elo_atual" onchange="MudeimgA()">
-                <option value="f">Ferro</option>
-                <option value="b">Bronze</option>
-                <option value="pr">Prata</option>
-                <option value="o">Ouro</option>
-                <option value="p">Platina</option>
-                <option value="d">Diamante</option>
-                <option value="m">Mestre</option>
+                <div>
+                    <select id="elo_atual" onchange="MudeimgA()">
+                        <option value="Ferro">Ferro</option>
+                        <option value="Bronze">Bronze</option>
+                        <option value="Prata">Prata</option>
+                        <option value="Ouro">Ouro</option>
+                        <option value="Platina">Platina</option>
+                        <option value="Diamante">Diamante</option>
+                        <option value="Mestre">Mestre</option>
 
 
-            </select>
+                    </select>
 
-            <select id="nivel_elo_atual" onchange="MudeimgA()">
-                <option value="1"> 1</option>
-                <option value="2"> 2</option>
-                <option value="3"> 3</option>
-                <option value="4"> 4</option>
+                    <select id="nivel_elo_atual" onchange="MudeimgA()">
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4" selected> 4</option>
 
-            </select>
+                    </select>
+                </div>
+
+
+                <div>
+                    <select id="elo_desejado" onchange="MudeimgB()">
+                        <option value="Ferro">Ferro</option>
+                        <option value="Bronze">Bronze</option>
+                        <option value="Prata">Prata</option>
+                        <option value="Ouro">Ouro</option>
+                        <option value="Platina">Platina</option>
+                        <option value="Diamante">Diamante</option>
+                        <option value="Mestre">Mestre</option>
+
+
+                    </select>
+
+                    <select id="nivel_elo_desejado" onchange="MudeimgB()">
+                        <option value="1"> 1</option>
+                        <option value="2"> 2</option>
+                        <option value="3"> 3</option>
+                        <option value="4"> 4</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+            <div id="elo_b">
+
+                <img id="img_elo_atual" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_4.png">
+                <img id="img_elo_desejavel" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_1.png">
+
+
+            </div>
+
+        
+
         </div>
-            
-              
-        <div>
-            <select id="elo_desejado" onchange="MudeimgB()">
-                <option value="f">Ferro</option>
-                <option value="b">Bronze</option>
-                <option value="pr">Prata</option>
-                <option value="o">Ouro</option>
-                <option value="p">Platina</option>
-                <option value="d">Diamante</option>
-                <option value="m">Mestre</option>
 
-
-            </select>
-
-            <select id="nivel_elo_desejado" onchange="MudeimgB()">
-                <option value="1"> 1</option>
-                <option value="2"> 2</option>
-                <option value="3"> 3</option>
-                <option value="4"> 4</option>
-
-            </select>
-        </div>
-
-        </div>
-
-        <div id="elo_b">
-
-            <img id="img_elo_atual" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_1.png">
-            <img id="img_elo_desejavel" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_1.png">
-           
-
-        </div>
 
         <div id="div_simulador">
+
+           <h1>Tabela de Preços</h1>
+
+            <span id="span_valor">Valor do Ferro 4 ao Ferro 1</span>
+
+            <p id="p_preco">R$20,00</p>
 
         </div>
 
