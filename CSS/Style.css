@@ -1,7 +1,6 @@
 body{
  margin: 0;
  padding: 0;   
- background-color: #2F304E;
 }
 
 #header{
@@ -32,11 +31,12 @@ width: 140px;
 
 #navbar{
 list-style: none;
+border-radius: 20px;
 
 }
 
 #navbar a{
-color: #DAA520;   
+color: whitesmoke;   
 text-decoration: none;
 font-size: 30px;
 
@@ -46,7 +46,7 @@ font-size: 30px;
 
 z-index: 1;
 
-height: 65vh;
+height: 90vh;
 width: 100vw;
 
 display: flex;
@@ -63,7 +63,7 @@ font-size: 45px;
 
 #video_fundo{
 object-fit: fill;
-height: 75vh;
+height: 100vh;
 width: 100vw;
 
 z-index: -1;
@@ -114,9 +114,9 @@ width: 32%;
 
 font-size: 20px;
 
+background-color: #ba9068;
 
 padding: 1%;
-border: 2px #DAA520 solid;
 border-radius: 10px;
 
 }
@@ -136,6 +136,7 @@ margin:auto;
   display: flex;
 align-items: flex-start;
 flex-direction: column;
+
 }
 
 
@@ -144,6 +145,7 @@ flex-direction: column;
     justify-content: space-around;
     width: 100%;    
     
+    
 }
 
 #elo_b{
@@ -151,13 +153,14 @@ flex-direction: column;
   display: flex;
   justify-content: space-around;
   margin-top: 2%;
+  
 }
 
 #div_simulador{
 
 width: 40%;
 
-border: solid 2px #DAA520;
+
 
 }
 
@@ -169,6 +172,7 @@ border: solid 2px #DAA520;
 #control_grafico{
   height: 200px;
   width: 310px;
+  margin: auto;
 }
 
 #Tempo_elo{
