@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Desafio-EloLorde/Desafio-EloLords/CSS/Style.css">
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600&display=swap"
+        rel="stylesheet">
     <title>Elo-Lords The One</title>
-    <script src="/Desafio-EloLorde/Desafio-EloLords/Script/Script.js"></script>
+    <script src="/Script/Script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -17,10 +23,16 @@
     <div id="header">
         <div id="container_header">
 
-            <img id="Logo" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/logos/logo-new-color.png">
+            <img id="Logo" src="/ImgDeItens/logos/logo-new-color.png">
 
             <ul id="navbar">
-                <li> <a href="Login.html">Área do cliente</a></li>
+                <li id="navbar_itens">
+                    <a href="#">Inicio</a>
+                    <a href="Elojob.html">Elojob</a>
+                    <a href="">Parceiros</a>
+                    <a>|</a>
+                    <a href="Login.html">Área do cliente</a>
+                </li>
             </ul>
 
         </div>
@@ -29,24 +41,19 @@
 
     <section id="Section1">
 
-        <img src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/jinx-lol-firecracker-splash-art-uhdpaper.com-4K-764.jpg"
-            id="video_fundo"></immg>
+        <img src="/ImgDeItens/fundo14.jpg" class="video_fundo"></img>
 
-<div>
-         <h1>Elo-Lords</h1>
-         <span class="span_compre">The Best Players and Services</span>
+        <div id="Nome_catchphrase">
+            <h1 id="nome_empresa">Elo-Lords</h1>
+            <span class="span_compre">The Best Players and Services</span>
+            <a href="Elojob.html" id="a_compre">compre agora</a>
 
         </div>
-    </section>
-
-
-    <section id="Section2">
 
         <div id="Diferencial">
-
             <div class="motivo">
 
-                <h2>Temos os Melhores!!!</h2>
+                <h2 class="hs">Temos os Melhores!!!</h2>
 
                 <span>
                     Aqui na EloLords só trabalhamos com os melhores players, players esses que estão
@@ -56,7 +63,7 @@
 
             <div class="motivo">
 
-                <h3>Trabalhamos com o Menor Tempo!</h3>
+                <h3 class="hs">Trabalhamos com o Menor Tempo!</h3>
 
                 <span>
                     Com players tão bons fazemos entregas com o prazo mais curto possivel,
@@ -69,7 +76,7 @@
 
             <div class="motivo">
 
-                <h4>Desconto Se não conseguirmos </h4>
+                <h4 class="hs">Desconto Se não conseguirmos </h4>
 
                 <span>
                     Uma metodologia Tryhard, na qual se não conseguirmos entregar seu pedido no prazo estimado
@@ -80,154 +87,30 @@
             </div>
 
 
-
         </div>
-
 
     </section>
 
 
-    <section id="Section3">
 
+<section id="Section2">
 
+<div></div>
 
+           
+</section>
 
+<section id="Section3">
 
-        <div id="control_select_img">
-
-            <div id="select_elo">
-
-                <div>
-                    <select id="elo_atual" onchange="MudeimgA()">
-                        <option value="Ferro">Ferro</option>
-                        <option value="Bronze">Bronze</option>
-                        <option value="Prata">Prata</option>
-                        <option value="Ouro">Ouro</option>
-                        <option value="Platina">Platina</option>
-                        <option value="Diamante">Diamante</option>
-                        <option value="Mestre">Mestre</option>
-
-
-                    </select>
-
-                    <select id="nivel_elo_atual" onchange="MudeimgA()">
-                        <option value="1"> 1</option>
-                        <option value="2"> 2</option>
-                        <option value="3"> 3</option>
-                        <option value="4" selected> 4</option>
-
-                    </select>
-                </div>
-
-
-                <div>
-                    <select id="elo_desejado" onchange="MudeimgB()">
-                        <option value="Ferro">Ferro</option>
-                        <option value="Bronze">Bronze</option>
-                        <option value="Prata">Prata</option>
-                        <option value="Ouro">Ouro</option>
-                        <option value="Platina">Platina</option>
-                        <option value="Diamante">Diamante</option>
-                        <option value="Mestre">Mestre</option>
-
-
-                    </select>
-
-                    <select id="nivel_elo_desejado" onchange="MudeimgB()">
-                        <option value="1"> 1</option>
-                        <option value="2"> 2</option>
-                        <option value="3"> 3</option>
-                        <option value="4"> 4</option>
-
-                    </select>
-                </div>
-
-            </div>
-
-            <div id="elo_b">
-
-                <img id="img_elo_atual" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_4.png">
-                <img id="img_elo_desejavel" src="/Desafio-EloLorde/Desafio-EloLords/ImgDeItens/Elos/Ferro_1.png">
-
-
-            </div>
-
-        
-
-        </div>
-
-
-        <div id="div_simulador">
-
-           <h1>Tabela de Preços</h1>
-
-            <span id="span_valor">Valor do Ferro 4 ao Ferro 1</span>
-
-            <p id="p_preco">R$20,00</p>
-
-        </div>
-
-
-
-    </section>
-
-<section id="Section4">
-
-    <div id="control_grafico">
-    <canvas id="Tempo_elo"  height="300px" width="300px"></canvas> 
-</div>   
+    <h1>Integrantes</h1>
 </section>
 
 
-<section id="Section5">
+<footer>
 
-<h1>Integrantes</h1>
-
-</section>
+            <span id="span_footer">Elo-Lords All rights Copyrighted &copy;</span>
 
 
-    <footer>
-
-        <span id="span_footer">Elo-Lords All rights Copyrighted &copy;</span>
-
-
-    </footer>
+</footer>
 
 </body>
-
-</html>
-
-<script>
-    
-
-
-    const labels = [
-    'Ferro',
-    'Bronze',
-    'Prata',
-    'Ouro',
-    'Platina',
-    'Diamante',
-    'Mestre'
-  ];
-
-  const data = {
-    labels: labels,
-    datasets: [{
-      label: 'Elo Mais Desejado',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [2,4, 8, 16, 32,64,128],
-    }]
-  };        
-
-  const config = {
-    type: 'bar',
-    data: data,
-    options: {}
-  };
-  const myChart = new Chart(
-    document.getElementById('Tempo_elo'),
-    config
-  );
-</script>
