@@ -70,7 +70,7 @@ font-size: 35px;
 
 }
 
-.video_fundo{
+.img_fundo{
 object-fit: fill;
 height: 100vh;
 width: 100vw;
@@ -117,48 +117,13 @@ font-size: 20px;
 }
 
 
-#Diferencial{
-
-  display: flex;
-  justify-content: space-around;
-  
-  
-  height: 30%;
-  width: 100%;
-  
-  margin-top: 2%;
-  
-  
-  
-  }
-  
-  .motivo{
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  flex-direction: column;
-     
-  height: 70%;
-  width: 32%; 
-  
-  font-size: 20px;
-  color: whitesmoke;
-  
-  padding: 1%;
-  border-radius: 10px;
-  
-  }
-
-.hs{
-  font-family: 'Cinzel',cursive;
-}
 
 
 #Section2{
 
 margin: auto;  
 
-background-image: url(/ImgDeItens/Design\ 2.png);
+background-image: url(/ImgDeItens/Fundos/Design\ 2.png);
 background-repeat: no-repeat;
 background-size: cover;
 

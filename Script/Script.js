@@ -1,3 +1,9 @@
+function Goback(){
+    console.log('a')
+window.location.assign("Index.html") 
+
+}
+
 
  
 
@@ -270,11 +276,6 @@ function MudeimgB() {
 
 }
 
-
-function Goback(){
-window.location.assign("Index.html") 
-
-}
 
 
 
