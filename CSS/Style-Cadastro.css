@@ -37,6 +37,7 @@ flex-direction: column;
 
 form{
 display: flex;
+flex-wrap: wrap;
 flex-direction: column; 
   
 }
