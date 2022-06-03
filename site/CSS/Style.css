@@ -15,6 +15,7 @@ z-index: 1;
 #container_header{
 
 width: 90%;
+height: 100%;
 margin: auto;
 
 display: flex;
@@ -25,8 +26,8 @@ align-items: center;
 
 #Logo{
 
-height: 100px;
-width: 140px;    
+height: 60px;
+width: 100px;    
 
 }
 
@@ -44,9 +45,10 @@ justify-content: space-evenly;
 }
 
 #navbar a{
-color: whitesmoke;   
+color: rgb(225, 225, 225);   
 text-decoration: none;
 font-size: 25px;
+font-weight: 900;
 
 }
 
@@ -93,14 +95,6 @@ position: absolute;
  
 }
 
-
-#nome_empresa{
-font-size: 80px;
-color: whitesmoke;
-font-family:'Cinzel',cursive;
-margin: 0.5%;
-}
-
 #a_compre{
 
 margin-top: 3%;
@@ -123,7 +117,7 @@ font-size: 20px;
 
 margin: auto;  
 
-background-image: url(/ImgDeItens/Fundos/Design\ 2.png);
+background-image: url(/site/ImgDeItens/Fundos/Design\ 2.png);
 background-repeat: no-repeat;
 background-size: cover;
 
@@ -133,6 +127,31 @@ height: 100vh;
 width: 100vw;
 
 display: flex;
+
+border-bottom: 1px solid black;
+
+}
+
+#container_exp{
+
+width: 40%;
+height: 100%;
+display: flex;
+flex-direction: column;
+margin-top: 6%;
+margin-left: 5%;
+
+font-size: 20px;
+}
+
+#container_exp h1{
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+#container_exp p{
+  text-align: justify;
+  margin-top: 10%;
 }
 
 

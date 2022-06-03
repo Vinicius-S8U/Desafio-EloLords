@@ -33,7 +33,7 @@ body {
 }
 
 #navbar {
-    width: 45%;
+    width: 55%;
     list-style: none;
     border-radius: 20px;
     font-family: 'Cinzel', cursive;
@@ -109,7 +109,7 @@ align-items: center;
 justify-content: center;
 position: absolute;
 height: 60px;
-width: 265px;
+width: 261px;
 background-color: #06040fe3;
 color:  rgb(255, 255, 255);  
 z-index: 1;
