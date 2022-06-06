@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+    background-color: rgb(11, 11, 11);
+}
+
+#header {
+    height: 10vh;
+    width: 100%;
+    background-color: #111;
+    z-index: 1;
+   border-bottom: 2px solid rgba(51,51,51,.25);
+}
+
+
+#container_header {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#Logo {
+
+    height: 60px;
+    width: 100px;
+
+}
+
+#navbar {
+    width: 55%;
+    list-style: none;
+    border-radius: 20px;
+    font-family: 'Cinzel', cursive;
+
+}
+
+#navbar_itens {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#navbar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 25px;
+
+}
+
+
+#section1{
+
+
+height: 70vh;
+width: 100vw;
+}
+#container_visual{
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+flex-direction: column;
+
+}
+#video_champ{
+
+height: 70vh;
+width: 100vw;
+object-fit: fill;  
+position: absolute;
+z-index: -1;
+
+}
+
+#section2{
+
+height: auto;
+width: 100vw;
+display: flex;
+
+}
+
+#nome_champ{
+
+text-align: center;
+
+font-size: 80px;   
+color: rgb(180, 166, 65);    
+
+margin: 0px;
+}
+
+#divisor{
+
+width: 100vw;   
+    
+}
+
+#titulo_champ{
+text-align: center;
+
+font-size: 30px;
+color: whitesmoke;
+
+}
+
+#contexto_champ{
+    height: auto;
+    width: 85%;
+    padding: 2%;
+    margin: auto;
+    
+    border: 1px solid rgb(45, 43, 43);
+
+
+    line-height: 50px;
+    color: grey;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(24, 23, 23);
+}
+
+#slogan_champ{
+    color: rgb(180, 166, 65)
+}
+
+#section3{
+
+height: auto;
+width: 100vw;
+
+}
+
+#container_regiao{
+
+height: 100%;
+width: 80%;
+margin: auto;
+
+margin-top: 1%;
+
+
+color: white;
+text-align: center;    
+
+display: flex;
+justify-content: space-around;
+
+}
+
+.control_arg{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 300px;
+    width: 300px;   
+
+background-color: rgb(24, 23, 23);
+
+overflow: hidden;
+
+}
+
+#regiao{
+
+
+  -webkit-transition: -webkit-transform .5s ease;
+   transition: transform .5s ease;
+    height: 40%;
+    width: auto;
+
+}
+  
+#regiao:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.5);
+ }
+
+#section4{
+
+height: 40vh;
+width: 100vw;
+
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+
+margin-bottom: 9%;
+
+color: whitesmoke;
+
+text-align: center;
+}
+
+
+#container_randoms{
+
+    height: 100%;
+    width: 80%;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;  
+}
+
+.control_random{
+    height: 100%;
+    width: 40%;
+    
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+}
+
+#random_img1{
+    height: 300px;
+    width: 300px;
+    z-index: -1;
+}
+
+#random_img2{
+    height: 300px;
+    width: 300px;
+    z-index: -1;
+}
+
+.nome_champ{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 60px;
+    width: 300px;
+    border-top: solid 1px rgb(180, 166, 65) ;
+    background-color: #000000e3;
+    color:  rgb(180, 166, 65);  
+    z-index: 1;
+    }
+
+#Section5{
+    width: 100vw;
+    height: 40vh;
+}
+  
+  
+footer{
+  
+  height: 10vh;
+  width: 100vw;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  
+}
