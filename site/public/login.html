@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600&display=swap"
+        rel="stylesheet">
+    <script src="/Script/Script.js"></script>
+    <link rel="stylesheet" href="/CSS/Style-login.css">
+</head>
+
+<body>
+
+    <div id="div_login">
+
+        <input type="image" id="Logo" src="/ImgDeItens/logos/logo-new-color.png" onclick="Goback()">
+
+        <div id="div_control">
+
+
+            <div id="card_login">
+
+                <h1>Iniciar Sessão</h1>
+
+                <div>
+                    <form>
+
+                        <input class="ipt_form" type="text" placeholder="E-mail" id="email">
+
+                        <input class="ipt_form" type="password" placeholder="Senha" id="senha">
+
+
+
+
+
+                    </form>
+
+                </div>
+                <small id="error"></small>
+                <button id="btn_login" onclick="entrar()"> Entrar</button>
+
+                <div id="control_cadastrar">
+                    <li class="esqueceu_senha">
+                        <a href="Cadastro.html">Crie Sua Conta</a>
+                    </li>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+<html>
+
+<script>
+
+    function entrar() {
+        var emailVar = email.value;
+        var senhaVar = senha.value;
+
+        if (emailVar.length == 0 || senhaVar.length == 0) {
+            error.innerHTML = `Preencha todos os campos para prosseguir!`;
+        } else {
+            fetchlogin();
+        }
+    }
+
+    function fetchlogin() {
+        var emailVar = email.value;
+        var senhaVar = senha.value;
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("ESTOU NO THEN DO entrar()!");
+
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then((json) => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome_usuario;
+                        sessionStorage.ID_USUARIO = json.id_usuario;
+                        sessionStorage.Quest1 = json.quest1;
+
+                        setTimeout(function () {
+                            window.location = "./cards.html";
+                        }, 1000); // apenas para exibir o loading
+                    });
+                } else {
+                    console.log("Houve um erro ao tentar realizar o login!");
+
+                    resposta.text().then((texto) => {
+                        error.innerHTML = texto
+                        console.error(texto);
+                    });
+                }
+            })
+            .catch(function (erro) {
+                console.log(erro);
+            });
+
+    }
+
+</script>

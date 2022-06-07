@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+    padding: 0;  
+    background-color:rgb(10, 10, 10) ;
+  }
+
+  #header {
+    height: 10vh;
+    width: 100%;
+    background-color: #111;
+    z-index: 1;
+   border-bottom: 2px solid rgba(51,51,51,.25);
+}
+
+
+#container_header {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#Logo {
+
+    height: 60px;
+    width: 100px;
+
+}
+
+#navbar {
+    width: 55%;
+    list-style: none;
+    border-radius: 20px;
+    font-family: 'Cinzel', cursive;
+
+}
+
+#navbar_itens {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#navbar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.h1_pct{
+    color: whitesmoke;
+    text-align: center;
+
+}
+
+#control_metricas{
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.metricas{
+height: 50%;
+width: 12%;
+
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+
+border: 2px solid black;
+
+}
+
+#m1{
+    background-color: red;
+}
+
+#m2{
+    background-color: orange;
+    color: black;
+}
+
+#m3{
+    background-color: yellow;
+    color:black;
+}
+
+#m4 {
+    background-color: green;
+}
+
+#t1{
+    background-color: red;
+    color: whitesmoke;
+}
+
+#t2{
+    background-color: orange;
+    color: black;
+}
+
+#t3{
+    background-color: yellow;
+    color:black;
+}
+
+#t4 {
+    background-color: green;
+    color: whitesmoke;
+}
+
+
+.control_cards{
+
+height: 10vh;
+width: 100vw;
+
+display: flex;
+justify-content: space-evenly;
+
+margin-top: 4%;
+
+}
+
+.titulo_coment{
+
+    height: 70px;
+    width: 250px;
+
+
+    background-color: whitesmoke;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    border: solid 1px black;
+
+    padding: 5px;
+
+}
+
+
+.coment{
+    height: 50%;
+    width: 90%;
+    margin: auto ;
+     
+    
+   display: flex;
+
+   justify-content: center;
+   align-items: center;
+
+    border-top: 1px solid black;
+}
+
+.control_graph{
+    height:  400px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    background-color: rgba(249, 249, 249, 0.163);
+
+
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+
+
+footer{
+height: 10vh;
+width: 100vw;
+
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: black;
+color: white;
+
+}

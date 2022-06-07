@@ -303,14 +303,14 @@ function MudeimgB() {
 }
 
 lista_champs = [
-    "/site/public/ImgDeItens/Campeões/Vayne2.o.jpg",
-    "/site/public/ImgDeItens/Campeões/Draven.jpg",
-    "/site/public/ImgDeItens/Campeões/Lucian2.o.jpg",
-    "/site/public/ImgDeItens/Campeões/kalista.jpg",
-    "/site/public/ImgDeItens/Campeões/Kai sa 2.jpg",
-    "/site/public/ImgDeItens/Campeões/Yasuo.jpg",
-    "/site/public/ImgDeItens/Campeões/Caitylin.jpg",
-    "/site/public/ImgDeItens/Campeões/twitch.jpg"
+    "/ImgDeItens/Campeões/Vayne2.o.jpg",
+    "/ImgDeItens/Campeões/Draven.jpg",
+    "/ImgDeItens/Campeões/Lucian2.o.jpg",
+    "/ImgDeItens/Campeões/kalista.jpg",
+    "/ImgDeItens/Campeões/Kai sa 2.jpg",
+    "/ImgDeItens/Campeões/Yasuo.jpg",
+    "/ImgDeItens/Campeões/Caitylin.jpg",
+    "/ImgDeItens/Campeões/twitch.jpg"
 ]
 
 lista_possivel_output = [
@@ -327,7 +327,7 @@ function RandomChamp(){
 
 for(contador = 0;contador <= lista_possivel_output.length; contador++){
 
-    if(window.location.href.split('/')[7] == lista_possivel_output[contador]){
+    if(window.location.href.split('/')[4] == lista_possivel_output[contador]){
         lista_champs.splice(contador,1)
         lista_possivel_output.splice(contador,1)
         imgChamp()
@@ -383,7 +383,7 @@ function timer(ms) { return new Promise(res => setTimeout(res, ms)); }
 lista_possivel_output2 = [
     "Demacia.html",
     "Noxus.html",
-    "IlhaDasSombras.html",
+    "IlhadasSombras.html",
     "Vazio.html",
     "Zaun.html",
     "Ionia.html",
@@ -391,20 +391,20 @@ lista_possivel_output2 = [
 ]
 
 lista_regiao = [
-    "/site/public/ImgDeItens/Regiões/demacia.jpeg",
-    "/site/public/ImgDeItens/Regiões/noxus.jpg",
-    "/site/public/ImgDeItens/Regiões/IlhadasSombras.jpg",
-    "/site/public/ImgDeItens/Regiões/void.jpg",
-    "/site/public/ImgDeItens/Regiões/zaun.jpeg",
-    "/site/public/ImgDeItens/Regiões/ionia.jpg",
-    "/site/public/ImgDeItens/Regiões/piltover.jpg"
+    "/ImgDeItens/Regiões/demacia.jpeg",
+    "/ImgDeItens/Regiões/noxus.jpg",
+    "/ImgDeItens/Regiões/IlhadasSombras.jpg",
+    "/ImgDeItens/Regiões/void.jpg",
+    "/ImgDeItens/Regiões/zaun.jpeg",
+    "/ImgDeItens/Regiões/ionia.jpg",
+    "/ImgDeItens/Regiões/piltover.jpg"
 
 ]
 
 function RandomRegiao(){
     for(contador = 0;contador <= lista_possivel_output2.length; contador++){
 
-        if(window.location.href.split('/')[7] == lista_possivel_output2[contador]){
+        if(window.location.href.split('/')[4] == lista_possivel_output2[contador]){
             lista_regiao.splice(contador,1)
             lista_possivel_output2.splice(contador,1)
             imgRegiao()

@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;  
-  background-image: url(/site/public/ImgDeItens/Fundos/Fundo4.jpg);
+  background-image: url(/ImgDeItens/Fundos/Fundo4.jpg);
   background-size: cover;
 }
 
@@ -59,6 +59,7 @@ h1{
   width: 100%;
  height: 35px; 
  margin-top: 4%;
+ margin-bottom: 4%;
  font-size: 20px;
 }
 
@@ -69,7 +70,7 @@ color: black;
 font-weight: bold;
 font-size: 20px;
 height: 40px;  
-width: 60%;
+width: 50%;
 border-radius: 20px;
 }
 

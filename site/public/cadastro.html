@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/Style-Cadastro.css">
+  <script src="/Script/Script.js"></script>
+</head>
+
+<body>
+
+
+  <div id="div_cadastro">
+
+    <input type="image" id="Logo" src="/ImgDeItens/logos/logo-new-color.png" onclick="Goback()">
+
+    <div id="div_control">
+
+
+
+
+      <h1> Cadastro</h1>
+
+      <div>
+        <form>
+
+          <input class="ipt_form" type="text" placeholder="Usuario" id="usuario">
+          <small id="validacao_usuario"> </small>
+
+
+          <input class="ipt_form" type="number" placeholder="Idade" id="idade">
+          <small id="validacao_idade"> </small>
+
+
+          <input class="ipt_form" type="text" placeholder="E-mail" id="email">
+          <small id="validacao_email"> </small>
+
+          <input class="ipt_form" type="password" placeholder="Senha" id="senha">
+          <small id="validacao_senha"> </small>
+
+          <input class="ipt_form" type="password" placeholder="Confirmar Senha" id="confirmar_senha">
+          <small id="validacao_senha2"> </small>
+
+
+        </form>
+
+      </div>
+
+      <button id="btn_login" onclick="Valide()"> Cadastrar</button>
+
+    </div>
+
+
+
+
+  </div>
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+
+      function Valide() {
+  
+        usuarioVar = usuario.value
+        emailVar = email.value
+        idadeVar = Number(idade.value)
+        senhaVar = senha.value
+        senha_confirm = confirmar_senha.value
+  
+  
+        Erro_Validação = 0;
+  
+        if (usuarioVar == "") {
+          validacao_usuario.innerHTML = `<span style="color:white;font-size:15px;font-weight:900">Preencha este campo para prosseguir</span>`;
+  
+          Erro_Validação++;
+        } else if (usuarioVar.length < 4) {
+          validacao_usuario.innerHTML = `<span style="color:white;font-size:15px;font-weight:900">Usuario Invalido - Deve ter pelo menos 5 digitos</span>`;
+  
+  
+        } else {
+          validacao_usuario.innerHTML = `<span style="color:green;font-size:15px;font-weight:900">Válido</span>`;
+        }
+   
+  /* --------------------------------------------------------------------------------------- */
+         //email
+  
+        if (emailVar == "") {
+          validacao_email.innerHTML = `<span style="color:white;font-size:15px;font-weight:900">Preencha este campo para prosseguir</span>`;
+  
+          Erro_Validação++;
+        } else if (emailVar.indexOf("@") == -1) {
+          validacao_email.innerHTML = `<span style="color:white;font-size:15px;font-weight:900">Email Invalido - Verifique se esta digitando corretamente</span>`;
+  
+          Erro_Validação++;
+        } else if (emailVar.endsWith(".com") || emailVar.endsWith(".br")) {
+          validacao_email.innerHTML = `<span style="color:green;font-size:15px;font-weight:900">Válido</span>`;
+  
+        } else {
+          validacao_email.innerHTML = `<span style="color:white;font-size:15px;font-weight:900">Email Invalido - Verifique se esta digitando corretamente</span>`;
+  
+          Erro_Validação++;
+        } 
+  /* --------------------------------------------------------------------------------------- */
+  //idade
+
+     if (idadeVar == "") {
+        validacao_idade.innerHTML = `<span style="color:white;font-size:15px;font-weight:900">idade não pode estar vazio!!!</span>`;
+
+        Erro_Validação++;
+      } else {
+        validacao_idade.innerHTML = `<span style="color:green;font-size:15px;font-weight:900">Válido</span>`;
+      } 
+  /* --------------------------------------------------------------------------------------- */
+  //Senha
+
+        if (senhaVar == "" || senhaVar.length <= 7) {
+         validacao_senha.innerHTML = `<span style="color:white;font-size:15px;font-weight:900">Senha precisa ter no mínimo 8 caracteres</span>`;
+ 
+         Erro_Validação++;
+       } else {
+         validacao_senha.innerHTML = `<span style="color:green;font-size:15px;font-weight:900">Válido</span>`;
+       } 
+  /* --------------------------------------------------------------------------------------- */
+  // confirmar Senha
+       if (senha_confirm == "") {
+        validacao_senha2.innerHTML = `<span style="color:white;font-size:15px;font-weight:900">Senha não pode estar Vazio!!!</span>`;
+
+        Erro_Validação++;
+      }
+      else if (senha_confirm != senhaVar) {
+        validacao_senha2.innerHTML = `<span style="color:white;font-size:15px;font-weight:900">Senha não conferem.</span>`
+
+        Erro_Validação++;
+      }
+      else {
+        validacao_senha2.innerHTML = `<span style="color:green;font-size:15px;font-weight:900">Válido</span>`;
+      }
+ 
+  /* --------------------------------------------------------------------------------------- */
+
+  /* Se cadastro Validado */
+
+        if (Erro_Validação == 0) {
+          fetchcadastro();
+  
+        } else {
+          Erro_Validação = 0;
+        }
+  
+      }
+   
+  
+      function fetchcadastro() {
+        usuarioVar = usuario.value
+        emailVar = email.value
+        idadeVar = Number(idade.value)
+        senhaVar = senha.value
+        senha_confirm = confirmar_senha.value
+  
+  
+        // Enviando o valor da nova input
+         fetch("/usuarios/cadastrar", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                  // crie um atributo que recebe o valor recuperado aqui
+                  // Agora vá para o arquivo routes/usuario.js
+                  usuarioServer: usuarioVar,
+                  idadeServer: idadeVar,
+                  emailServer: emailVar,
+                  senhaServer: senhaVar
+              })
+          }).then(function (resposta) {
+  
+              console.log("resposta: ", resposta);
+  
+              if (resposta.ok) {
+                  
+                alert("Cadastro Realizado com Sucesso.")
+                     
+                  setTimeout(() => {
+                      window.location = "login.html";
+                  }, "1000")
+                  
+  
+              } else {
+                  throw ("Houve um erro ao tentar realizar o cadastro!");
+              }
+          }).catch(function (resposta) {
+              console.log(`#ERRO: ${resposta}`);
+              alert(resposta)
+          });
+  
+          return false;
+      }
+
+</script>

@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;  
-  background-image: url(/site/public/ImgDeItens/Fundos/Fundo2.jpg);
+  background-image: url(/ImgDeItens/Fundos/Fundo2.jpg);
   background-size: cover;
 }
 
@@ -57,7 +57,7 @@ align-items: center;
 form{
 display: flex;
 flex-direction: column; 
-  margin-bottom: 8%;
+  margin-bottom: 4%;
 }
 
 h1{
@@ -83,7 +83,7 @@ h1{
 
 .ipt_form{
   align-self: center;
-  width: 60%;
+  width: 50%;
  height: 40px; 
  margin-top: 4%;
  font-size: 20px;
@@ -99,11 +99,20 @@ font-size: 20px;
 width: 40%;
 height: 40px;  
 border-radius: 20px;
+
+margin-top: 2%
+;
 }
 
 #control_cadastrar{
  display: flex;
 
- margin-top: 5%;
+ margin-top: 1%;
  justify-content:center; 
+}
+
+#error{
+  text-align: center;
+  color:whitesmoke;
+  font-size: 14px;
 }

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600&display=swap"
+        rel="stylesheet">
+    <script src="/Script/Script.js"></script>
+    <link rel="stylesheet" href="CSS/Style-Card.css">
+    <script src="/Script/funcoes.js"></script>
+    <title>Questionário</title>
+</head>
+
+<body onload="validarSessao()">
+
+    <div id="header">
+        <div id="container_header">
+
+            <img id="Logo" src="/ImgDeItens/logos/logo-new-color.png">
+
+            <ul id="navbar">
+                <li id="navbar_itens">
+                    <a href="#">Questionário</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a>|</a>
+                    <a href="index.html" onclick="limparSessao()">Sair</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div id="control_quest">
+
+        <div id="img_refer"> <img id="img_quest" src="ImgDeItens/Campeões/Yasuo.jpg"></div>
+
+
+        <div id="quest"><span id="pergunta">Qual o nome deste Campeão?</span></div>
+
+
+        <div id="options">
+
+            <button class="btn" id="opt1" onclick="opt1()">Riven</button>
+            <button class="btn"id="opt2" onclick="opt2()">Yasuo</button>
+            <button class="btn"id="opt3" onclick="opt3()">Mordekaiser</button>
+            <button class="btn"id="opt4" onclick="opt4()">Graves</button>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+
+    x = 0
+
+    lista_imgs = [
+        'ImgDeItens/Campeões/Yasuo.jpg',
+        'ImgDeItens/Regiões/demacia.jpeg',
+        'ImgDeItens/Campeões/Draven.jpg',
+        'ImgDeItens/Regiões/IlhadasSombras.jpg',
+        'ImgDeItens/Campeões/Lucian2.o.jpg',
+        'ImgDeItens/Regiões/void.jpg',
+        'ImgDeItens/Campeões/Kalista.jpg',
+        'ImgDeItens/Regiões/piltover.jpg',
+        'ImgDeItens/Campeões/Vayne2.o.jpg',
+        'ImgDeItens/logos/EGS_LeagueofLegends_RiotGames_S1_2560x1440-ee500721c06da3ec1e5535a88588c77f.jfif',
+        'ImgDeItens/logos/arcane-final-poster-16x9-no-text-no-border.jpg'
+    ]
+
+    lista_perguntas = [
+        'Qual o nome deste Campeão?',
+        'Demacia é conhecida por ser:',
+        'Segundo a história de Draven qual é o nome de Seu irmão?',
+        'A ilha das Sombras já foi lar de uma civilização nobre e evoluída, sendo conhecida entre seus aliados como as:',
+        'Qual o nome do campeão que aprisionou Senna em uma lanterna e que Lucian jurou vingança?',
+        'Quem são os mestres do Vazio',
+        'Quem apunhalou Kalista pelas costas?',
+        'Piltover é conhecida como a cidade do:',
+        'Qual é nome da mestra de Vayne?',
+        'Você já jogou League of Legends?',
+        "O que você achou de Arcane?"
+    ]
+    
+    lista_opt1 = [
+          'Riven',
+          'Refugio Contra a Feitiçaria',
+          'Gnar',
+          'Ilha das Bençãos',
+          'Draven',
+          'Os Observadores',
+          'Vayne',
+          'Regresso',
+          'Ashe',
+          'Muito',
+          'Bom'  
+        ]
+    lista_opt2 = [
+      'Yasuo',
+      'Refugio para Magos',
+      'Volibear',
+      'Ilha das Maravilhas',
+      'Thresh',
+      'Freljordianos',
+      'Twitch',
+      'Sucesso',
+      'Evellyn',
+      'Não',
+      'Ruim'
+]
+
+    lista_opt3 = [
+        'Mordekaiser',
+        'Refugio para habitantes de Shurima',
+        'Darius',
+        'Ilha das Maldições',
+        'Blitzcrank',
+        'Seguidores de Aurelion Sol',
+        'Zac',
+        'Lamento',
+        "Kai'sa",
+        'todo dia',
+        'Não assisti'
+    ]
+
+    lista_opt4 = [
+        'Graves',
+        'Refugio para noxianos',
+        'Swain',
+        'Ilha Arco-Iris',
+        'Nautilus',
+        'Adeptos de Ahri',
+        'Hecarim',
+        'Progresso',
+        'Frey',
+        'Um pouco',
+        'Não terminei'
+    ]
+
+    option1 = document.getElementById('opt1')
+     option2 = document.getElementById('opt2')
+     option3 = document.getElementById('opt3')
+     option4 = document.getElementById('opt4')
+
+    function opt1() {
+        x++
+        if (x >= lista_perguntas.length) {
+            alert("Questionário Finalizado,redirecionando a Dashboard para avaliar seu progresso")
+            
+             acertos()
+
+            fetchresposta()
+
+        }
+
+        else {
+            pergunta.innerHTML = lista_perguntas[x]
+            img_quest.src = lista_imgs[x]
+
+            option1.textContent = `${lista_opt1[x]}`
+            option2.textContent = `${lista_opt2[x]}`
+            option3.textContent = `${lista_opt3[x]}`
+            option4.textContent = `${lista_opt4[x]}`
+
+        }
+
+
+        if(x == 1){
+            sessionStorage.Quest1 = 1
+        }
+        else if(x == 2){
+            sessionStorage.Quest2 = 1
+        }
+        else if(x == 3){
+            sessionStorage.Quest3 = 1
+        }
+        else if(x == 4){
+            sessionStorage.Quest4 = 1
+        }
+        else if(x == 5){
+            sessionStorage.Quest5 = 1
+        }
+        else if(x == 6){
+            sessionStorage.Quest6 = 1
+        }
+        else if(x == 7){
+            sessionStorage.Quest7 = 1
+        }
+        else if(x == 8){
+            sessionStorage.Quest8 = 1
+        }
+        else if(x == 9){
+            sessionStorage.Quest9 = 1
+        }
+        else if(x == 10){
+            sessionStorage.Quest10 = 1
+        }
+        else if(x == 11){
+            sessionStorage.Quest11 = 1
+        }
+        
+
+
+        
+    }
+
+    function opt2() {
+        x++
+        if (x >= lista_perguntas.length) {
+            alert("Questionário Finalizado,redirecionando a Dashboard para avaliar seu progresso")
+            
+             acertos()
+
+            fetchresposta()
+
+        }
+
+        else {
+            pergunta.innerHTML = lista_perguntas[x]
+            img_quest.src = lista_imgs[x]
+
+            option1.textContent = `${lista_opt1[x]}`
+            option2.textContent = `${lista_opt2[x]}`
+            option3.textContent = `${lista_opt3[x]}`
+            option4.textContent = `${lista_opt4[x]}`
+        }
+
+        
+        if(x == 1){
+            sessionStorage.Quest1 = 2
+        }
+        else if(x == 2){
+            sessionStorage.Quest2 = 2
+        }
+        else if(x == 3){
+            sessionStorage.Quest3 = 2
+        }
+        else if(x == 4){
+            sessionStorage.Quest4 = 2
+        }
+        else if(x == 5){
+            sessionStorage.Quest5 = 2
+        }
+        else if(x == 6){
+            sessionStorage.Quest6 = 2
+        }
+        else if(x == 7){
+            sessionStorage.Quest7 = 2
+        }
+        else if(x == 8){
+            sessionStorage.Quest8 = 2
+        }
+        else if(x == 9){
+            sessionStorage.Quest9 = 2
+        }
+        else if(x == 10){
+            sessionStorage.Quest10 = 2
+        }
+        else if(x == 11){
+            sessionStorage.Quest11 = 2
+        }
+        
+    }
+
+    function opt3() {
+        x++
+        if (x >= lista_perguntas.length) {
+            alert("Questionário Finalizado,redirecionando a Dashboard para avaliar seu progresso")
+            
+             acertos()
+
+            fetchresposta()
+
+        }
+
+        else {
+            pergunta.innerHTML = lista_perguntas[x]
+            img_quest.src = lista_imgs[x]
+
+            option1.textContent = `${lista_opt1[x]}`
+            option2.textContent = `${lista_opt2[x]}`
+            option3.textContent = `${lista_opt3[x]}`
+            option4.textContent = `${lista_opt4[x]}`
+        }
+
+               if(x == 1){
+            sessionStorage.Quest1 = 3
+        }
+        else if(x == 2){
+            sessionStorage.Quest2 = 3
+        }
+        else if(x == 3){
+            sessionStorage.Quest3 = 3
+        }
+        else if(x == 4){
+            sessionStorage.Quest4 = 3
+        }
+        else if(x == 5){
+            sessionStorage.Quest5 = 3
+        }
+        else if(x == 6){
+            sessionStorage.Quest6 = 3
+        }
+        else if(x == 7){
+            sessionStorage.Quest7 = 3
+        }
+        else if(x == 8){
+            sessionStorage.Quest8 = 3
+        }
+        else if(x == 9){
+            sessionStorage.Quest9 = 3
+        }
+        else if(x == 10){
+            sessionStorage.Quest10 = 3
+        }
+        else if(x == 11){
+            sessionStorage.Quest11 = 3
+        }
+        
+
+    }
+
+    function opt4() {
+        x++
+        if (x >= lista_perguntas.length) {
+            alert("Questionário Finalizado,redirecionando a Dashboard para avaliar seu progresso")
+            
+             acertos()
+
+            fetchresposta()
+
+        }
+
+        else {
+            pergunta.innerHTML = lista_perguntas[x]
+            img_quest.src = lista_imgs[x]
+
+            option1.textContent = `${lista_opt1[x]}`
+            option2.textContent = `${lista_opt2[x]}`
+            option3.textContent = `${lista_opt3[x]}`
+            option4.textContent = `${lista_opt4[x]}`
+        }
+
+        if(x == 1){
+            sessionStorage.Quest1 = 4
+        }
+        else if(x == 2){
+            sessionStorage.Quest2 = 4
+        }
+        else if(x == 3){
+            sessionStorage.Quest3 = 4
+        }
+        else if(x == 4){
+            sessionStorage.Quest4 = 4
+        }
+        else if(x == 5){
+            sessionStorage.Quest5 = 4
+        }
+        else if(x == 6){
+            sessionStorage.Quest6 = 4
+        }
+        else if(x == 7){
+            sessionStorage.Quest7 = 4
+        }
+        else if(x == 8){
+            sessionStorage.Quest8 = 4
+        }
+        else if(x == 9){
+            sessionStorage.Quest9 = 4
+        }
+        else if(x == 10){
+            sessionStorage.Quest10 = 4
+        }
+        else if(x == 11){
+            sessionStorage.Quest11 = 4
+        }
+        
+    }
+
+    function fetchresposta(){
+
+    fetch("/medidas/respostas", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                  // crie um atributo que recebe o valor recuperado aqui
+                  // Agora vá para o arquivo routes/usuario.js
+                  Quest1: sessionStorage.Quest1,
+                  Quest2: sessionStorage.Quest2,
+                  Quest3: sessionStorage.Quest3,
+                  Quest4: sessionStorage.Quest4,
+                  Quest5: sessionStorage.Quest5,
+                  Quest6: sessionStorage.Quest6,
+                  Quest7: sessionStorage.Quest7,
+                  Quest8: sessionStorage.Quest8,              
+                  Quest9: sessionStorage.Quest9,
+                  Quest10: sessionStorage.Quest10,
+                  Acertos: sessionStorage.ACERTOS,
+                  fk_usuario: sessionStorage.ID_USUARIO,
+
+              })
+          }).then(function (resposta) {
+  
+              console.log("resposta: ", resposta);
+  
+              if (resposta.ok) {                   
+
+                      window.location = "dashboard.html"
+                  
+  
+              } else {
+                  throw ("Houve um erro ao tentar realizar o cadastro!");
+              }
+          }).catch(function (resposta) {
+              console.log(`#ERRO: ${resposta}`);
+              alert(resposta)
+          });
+  
+          return false;
+      }
+
+acc = 0
+      function acertos(){
+       if(sessionStorage.Quest1 == 2){
+           acc ++
+       }
+
+       if(sessionStorage.Quest2 == 1){
+           acc ++
+       }
+
+        if(sessionStorage.Quest3 == 3){
+            acc ++
+        }
+
+        if(sessionStorage.Quest4 == 1){
+            acc ++
+        }
+
+        if(sessionStorage.Quest5 == 2){
+           acc ++
+        } 
+
+        if(sessionStorage.Quest6 == 1){
+            acc ++
+        }
+
+        if(sessionStorage.Quest7 == 4){
+            acc ++
+        }
+
+        if(sessionStorage.Quest8 == 4){
+             acc++
+        }
+
+
+        if(sessionStorage.Quest9 == 4){
+            acc++
+        }
+
+       sessionStorage.ACERTOS = acc
+      }
+
+    
+</script>
