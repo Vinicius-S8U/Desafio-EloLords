@@ -17,18 +17,22 @@ function respostas(req, res) {
 
     console.log(`Recuperando medidas em tempo real`);
 
-    medidaModel.respostas(Quest1,Quest2,Quest3,Quest4,Quest5,Quest6,Quest7,Quest8,Quest9,Quest10,acertos,fk_usuario).then(function (resultado) {
-        if (resultado.length > 0) {
-            res.status(200).json(resultado);
-        } else {
-            res.status(204).send("Nenhum resultado encontrado!")
+    medidaModel.respostas(Quest1,Quest2,Quest3,Quest4,Quest5,Quest6,Quest7,Quest8,Quest9,Quest10,acertos,fk_usuario).then(
+        function (resultado) {
+            res.json(resultado);
         }
-    }).catch(function (erro) {
-        console.log(erro);
-        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
-        res.status(500).json(erro.sqlMessage);
-    });
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log(
+                "\nHouve um erro ao realizar o cadastro! Erro: ",
+                erro.sqlMessage
+            );
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
 }
+
 
 
 function pct_acertos(req, res) {
